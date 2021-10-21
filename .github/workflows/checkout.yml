@@ -9,7 +9,7 @@ jobs:
       - name: Checkout
         uses: actions/checkout@v2
         with: 
-          path: gh-pages
+          path: main
       - name: Checkout bromite filters
         uses: actions/checkout@v2
         with:
