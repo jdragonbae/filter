@@ -14,5 +14,4 @@ jobs:
           repository: bromite/filters
           path: bromite
       - run: |
-          git status
-          ls
+          git -C bromite rev-parse HEAD
