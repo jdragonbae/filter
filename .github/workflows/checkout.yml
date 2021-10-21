@@ -7,6 +7,15 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v2
+      - name: Checkout
+        uses: actions/checkout@v2
+        with:
+          path: main
+      - name: Checkout bromite filters
+        uses: actions/checkout@v2
+        with:
+          repository: bromite/filters
+          path: bromite
       - run: |
           date > generated.txt
           git config user.name github-actions
