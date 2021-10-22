@@ -19,5 +19,9 @@ jobs:
             cp bromite/filters.dat $NEXT_VERSION.filter
             vim -c "set binary" -c "%s/wcslog.js/wcslog.ts/g" -c "wq" $NEXT_VERSION.filter
             zip -9 $NEXT_VERSION.filter.zip $NEXT_VERSION.filter
+            git add $NEXT_VERSION.filter.zip $NEXT_VERSION.filter
+            git commit -m "Release $NEXT_VERSION"
             ls
           fi
+      - name: Create Pull Request
+        uses: peter-evans/create-pull-request@v3
