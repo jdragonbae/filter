@@ -7,11 +7,13 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v2
-      
       - name: Checkout bromite filters
         uses: actions/checkout@v2
         with:
           repository: bromite/filters
           path: bromite
       - run: |
-          git -C bromite rev-parse HEAD
+          echo "e92fc1b1c75689be05c9b49624ba3c464dc0d2c7" >> VERSION
+          if [[ $(git -C bromite rev-parse HEAD) = $(cat VERSION) ]]; then
+            echo "SAME"
+          fi
