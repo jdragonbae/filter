@@ -25,14 +25,18 @@ jobs:
         id: last-version
         run: |
           echo "::set-output name=version::$(cat metadata.json | jq -r '.version'| awk -F. -v OFS=. 'NF==1{print ++$NF}; NF>1{if(length($NF+1)>length($NF))$(NF-1)++; $NF=sprintf("%0*d", length($NF), ($NF+1)%(10^length($NF))); print}')"
-      - name: Commit files
+      - name: Create Pull Request
         env:
           VERSION: ${{ steps.last-version.outputs.version }}
-        run: |
-          git config --local user.email "41898282+github-actions[bot]@users.noreply.github.com"
-          git config --local user.name "github-actions[bot]"
-          git add $VERSION.filter
-          git add $VERSION.filter.zip
-          git commit -m "Release $VERSION"
-      - name: Create Pull Request
         uses: peter-evans/create-pull-request@v3
+        with:
+          commit-message: "Release $VERSION"
+          committer: GitHub <noreply@github.com>
+          author: ${{ github.actor }} <${{ github.actor }}@users.noreply.github.com>
+          title: "Release $VERSION"
+          body: ""
+          signoff: false
+      - name: Check outputs
+        run: |
+          echo "Pull Request Number - ${{ steps.cpr.outputs.pull-request-number }}"
+          echo "Pull Request URL - ${{ steps.cpr.outputs.pull-request-url }}"
