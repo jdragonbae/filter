@@ -34,8 +34,5 @@ jobs:
           git add $VERSION.filter
           git add $VERSION.filter.zip
           git commit -m "Release $VERSION"
-      - name: Push changes
-        uses: ad-m/github-push-action@master
-        with:
-          github_token: ${{ secrets.GITHUB_TOKEN }}
-          branch: ${{ github.ref }}
+      - name: Create Pull Request
+        uses: peter-evans/create-pull-request@v3
