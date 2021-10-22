@@ -15,6 +15,6 @@ jobs:
       - run: |
           echo "e92fc1b1c75689be05c9b49624ba3c464dc0d2c7" >> VERSION
           if [[ $(git -C bromite rev-parse HEAD) = $(cat VERSION) ]]; then
-            $VERSION = `cat metadata.json | jq -r '.version'`
+            $VERSION=$(cat metadata.json | jq -r '.version')
             echo $VERSION
           fi
