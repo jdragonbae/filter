@@ -13,6 +13,7 @@ jobs:
           repository: bromite/filters
           path: bromite
       - run: |
+          echo "bromite" >> .gitignore
           echo "e92fc1b1c75689be05c9b49624ba3c464dc0d2c7" >> VERSION
           if [[ $(git -C bromite rev-parse HEAD) = $(cat VERSION) ]]; then
             NEXT_VERSION=$(cat metadata.json | jq -r '.version'| awk -F. -v OFS=. 'NF==1{print ++$NF}; NF>1{if(length($NF+1)>length($NF))$(NF-1)++; $NF=sprintf("%0*d", length($NF), ($NF+1)%(10^length($NF))); print}')
@@ -30,10 +31,10 @@ jobs:
           VERSION: ${{ steps.last-version.outputs.version }}
         uses: peter-evans/create-pull-request@v3
         with:
-          commit-message: "Release $VERSION"
+          commit-message: Release ${{ steps.last-version.outputs.version }}
           committer: GitHub <noreply@github.com>
           author: ${{ github.actor }} <${{ github.actor }}@users.noreply.github.com>
-          title: "Release $VERSION"
+          title: Release $VERSION"
           body: ""
           signoff: false
       - name: Check outputs
