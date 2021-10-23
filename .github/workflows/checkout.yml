@@ -34,7 +34,7 @@ jobs:
           commit-message: Release ${{ steps.last-version.outputs.version }}
           committer: GitHub <noreply@github.com>
           author: ${{ github.actor }} <${{ github.actor }}@users.noreply.github.com>
-          title: Release $VERSION"
+          title: Release ${{ steps.last-version.outputs.version }}
           body: ""
           signoff: false
       - name: Check outputs
