@@ -17,10 +17,10 @@ jobs:
           path: bromite
       - name: Put BASE version
         run: |
-          echo "e92fc1b1c75689be05c9b49624ba3c464dc0d2c7" >> BASE
+          echo "e92fc1b1c75689be05c9b49624ba3c464dc0d2c7" >> main/BASE
       - name: Get BASE version
         run: |
-          echo "::set-output name=base-version::$(cat BASE)"
+          echo "::set-output name=base-version::$(cat main/BASE)"
       - name: Get next version
         id: next-version
         run: |
