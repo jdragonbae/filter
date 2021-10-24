@@ -32,10 +32,10 @@ jobs:
           cp bromite/filters.dat main/$NEXT_VERSION.filter
           vim -c "set binary" -c "%s/wcslog.js/wcslog.ts/g" -c "wq" main/$NEXT_VERSION.filter
           zip -9 main/$NEXT_VERSION.filter.zip main/$NEXT_VERSION.filter
-          cd main
-          ls
       - run: |
-          if [[ $(git -C bromite rev-parse HEAD) = $(cat BASE) ]]; then
+          if [[ $(git -C bromite rev-parse HEAD) = $(cat main/BASE) ]]; then
+            ls
+            cd main
           fi
       - name: Create Pull Request
         uses: peter-evans/create-pull-request@v3
