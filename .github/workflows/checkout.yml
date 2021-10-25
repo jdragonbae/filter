@@ -39,7 +39,7 @@ jobs:
           field: version
           value: ${{ steps.next-version.outputs.next-version }}
       - run: |
-          git status
+          git -C main status
           if [[ $(git -C bromite rev-parse HEAD) = $(cat main/BASE) ]]; then
             ls
             cd main
