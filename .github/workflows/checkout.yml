@@ -34,7 +34,7 @@ jobs:
         run: |
            jq --arg size `ls -l ${{ steps.next-version.outputs.next-version }}.filter | awk '{print $5}'` '.size = "$size"' metadata.json > metadata.json
       - run: |
-          if [[ $(git -C bromite rev-parse HEAD) = $(cat main/BASE) ]]; then
+          if [[ $(git -C bromite rev-parse HEAD) = $(cat BASE) ]]; then
             ls
           fi
       - name: Create Pull Request
