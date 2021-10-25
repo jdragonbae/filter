@@ -32,6 +32,12 @@ jobs:
           cp bromite/filters.dat main/$NEXT_VERSION.filter
           vim -c "set binary" -c "%s/wcslog.js/wcslog.ts/g" -c "wq" main/$NEXT_VERSION.filter
           zip -9 main/$NEXT_VERSION.filter.zip main/$NEXT_VERSION.filter
+      - name: Update metadata.json version
+        uses: jossef/action-set-json-field@v1
+        with:
+          file: metadata.json
+          field: version
+          value: ${{ steps.next-version.outputs.next-version }}
       - run: |
           if [[ $(git -C bromite rev-parse HEAD) = $(cat main/BASE) ]]; then
             ls
