@@ -37,7 +37,7 @@ jobs:
            jq '.version = "${{ steps.next-version.outputs.next-version }}"' main/metadata.json > main/metadata.json
       - name: Update size field in metadata.json
         run: |
-           jq '.size = "`ls -l ${{ steps.next-version.outputs.next-version }}.filter | awk '{print $5}'`"' main/metadata.json > main/metadata.json
+           jq --arg size `ls -l ${{ steps.next-version.outputs.next-version }}.filter | awk '{print $5}'` '.size = "$size"' main/metadata.json > main/metadata.json
       - run: |
           git -C main status
           if [[ $(git -C bromite rev-parse HEAD) = $(cat main/BASE) ]]; then
