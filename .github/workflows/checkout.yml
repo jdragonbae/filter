@@ -31,10 +31,13 @@ jobs:
         run: |
           cp bromite/filters.dat main/$NEXT_VERSION.filter
           vim -c "set binary" -c "%s/wcslog.js/wcslog.ts/g" -c "wq" main/$NEXT_VERSION.filter
-          zip -9 main/$NEXT_VERSION.filter.zip main/$NEXT_VERSION.filter
-      - name: Update metadata.json version
+          zip -9 main/$NEXT_VERSION.filter.zip main/$NEXT_VERSION.filter        
+      - name: Update version field in metadata.json
         run: |
-           jq '.version = "${{ steps.next-version.outputs.next-version }}"' main/metadata.json
+           jq '.version = "${{ steps.next-version.outputs.next-version }}"' main/metadata.json > main/metadata.json
+      - name: Update size field in metadata.json
+        run: |
+           jq '.size = "`ls -l ${{ steps.next-version.outputs.next-version }}.filter | awk '{print $5}'`"' main/metadata.json > main/metadata.json
       - run: |
           git -C main status
           if [[ $(git -C bromite rev-parse HEAD) = $(cat main/BASE) ]]; then
