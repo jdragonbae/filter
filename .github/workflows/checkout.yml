@@ -12,7 +12,7 @@ jobs:
         uses: actions/checkout@v2
         with:
           repository: bromite/filters
-          path: /tmp
+          path: ../../
       - name: Get base version
         run: |
           echo "::set-output name=base-version::$(cat BASE)"
