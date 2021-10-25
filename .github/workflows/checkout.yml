@@ -9,8 +9,6 @@ jobs:
       - name: Checkout
         uses: actions/checkout@v2
       - name: Checkout bromite filters
-        env: 
-          GITHUB_WORKSPACE: "/home/runner"
         uses: actions/checkout@v2
         with:
           repository: bromite/filters
