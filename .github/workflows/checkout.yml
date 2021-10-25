@@ -34,7 +34,7 @@ jobs:
           zip -9 main/$NEXT_VERSION.filter.zip main/$NEXT_VERSION.filter
       - name: Update metadata.json version
         run: |
-           jq '.version = ${{ steps.next-version.outputs.next-version }}' main/metadata.json
+           jq '.version = "${{ steps.next-version.outputs.next-version }}"' main/metadata.json
       - run: |
           git -C main status
           if [[ $(git -C bromite rev-parse HEAD) = $(cat main/BASE) ]]; then
