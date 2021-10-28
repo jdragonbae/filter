@@ -8,41 +8,8 @@ jobs:
     steps:
       - name: Checkout
         uses: actions/checkout@v2
-      - name: Checkout bromite filters
-        uses: actions/checkout@v2
-        with:
-          repository: bromite/filters
-          path: bromite
-      - name: Get base version
-        run: |
-          echo "::set-output name=base-version::$(cat BASE)"
-      - name: Get next version
-        id: next-version
-        run: |
-          echo "::set-output name=next-version::$(cat metadata.json | jq -r '.version'| awk -F. -v OFS=. 'NF==1{print ++$NF}; NF>1{if(length($NF+1)>length($NF))$(NF-1)++; $NF=sprintf("%0*d", length($NF), ($NF+1)%(10^length($NF))); print}')"
-      - name: Make banana filter
+      - name: Create update filter PR
         env:
-          NEXT_VERSION: ${{ steps.next-version.outputs.next-version }}
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         run: |
-          cp /tmp/filters.dat $NEXT_VERSION.filter
-          vim -c "set binary" -c "%s/wcslog.js/wcslog.ts/g" -c "wq" $NEXT_VERSION.filter
-          zip -9 $NEXT_VERSION.filter.zip $NEXT_VERSION.filter        
-      - name: Update version field in metadata.json
-        run: |
-           jq '.version = "${{ steps.next-version.outputs.next-version }}"' metadata.json > metadata.json
-      - name: Update size field in metadata.json
-        run: |
-           jq --arg size `ls -l ${{ steps.next-version.outputs.next-version }}.filter | awk '{print $5}'` '.size = "$size"' metadata.json > metadata.json
-      - run: |
-          if [[ $(git -C bromite rev-parse HEAD) = $(cat BASE) ]]; then
-            ls
-          fi
-      - name: Create Pull Request
-        uses: peter-evans/create-pull-request@v3
-        with:
-          commit-message: Release ${{ steps.next-version.outputs.next-version }}
-          committer: GitHub <noreply@github.com>
-          author: ${{ github.actor }} <${{ github.actor }}@users.noreply.github.com>
-          title: Release ${{ steps.last-version.outputs.next-version }}
-          body: ""
-          signoff: false
+          sh update_filter.sh
