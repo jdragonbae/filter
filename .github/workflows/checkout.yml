@@ -12,4 +12,4 @@ jobs:
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         run: |
-          sh update_filter.sh
+          bash update_filter.sh
