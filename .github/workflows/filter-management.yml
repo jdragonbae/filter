@@ -1,14 +1,14 @@
-name: Manually triggered workflow
+name: Filter management
 on:
-  workflow_dispatch:
-
+  schedule:
+  - cron: "* * * * *"
 jobs:
-  hello:
+  action:
     runs-on: ubuntu-latest
     steps:
       - name: Checkout
         uses: actions/checkout@v2
-      - name: Create update filter PR
+      - name: Update triple banana filter
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         run: |
