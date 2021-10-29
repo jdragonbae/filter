@@ -49,4 +49,4 @@ curl \
     -H "Authorization: token $GITHUB_TOKEN" \
     -H "Accept: application/vnd.github.v3+json" \
     https://api.github.com/repos/jdragonbae/filter/pulls \
-    -d '{"title":"Release '${NEXT_VERSION}'", "head":"jdragonbae:release","base":"gh-pages"}'
+    -d '{"title":"Release '${NEXT_VERSION}'", "head":"release","base":"gh-pages"}'
