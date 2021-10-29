@@ -5,6 +5,9 @@
 # License, v. 2.0. If a copy of the MPL was not distributed with this
 # file, You can obtain one at https://mozilla.org/MPL/2.0/.
 
+# exit when any command fails
+set -ex
+
 #checkout bromite
 git clone https://github.com/bromite/filters.git bromite
 
@@ -12,7 +15,7 @@ echo "" >> BASE
 
 UPSTREAM_BASE=$(git -C bromite rev-parse HEAD)
 if [[ $(cat BASE) = $UPSTREAM_BASE ]]; then
-    echo "Don't need to update"
+    echo "Already up to date"
     exit 1
 fi
 
@@ -49,4 +52,4 @@ curl \
     -H "Authorization: token $GITHUB_TOKEN" \
     -H "Accept: application/vnd.github.v3+json" \
     https://api.github.com/repos/jdragonbae/filter/pulls \
-    -d '{"title":"Release '${NEXT_VERSION}'", "head":"jdragonbae:release","base":"gh-pages"}'
+    -d '{"title":"Release '${NEXT_VERSION}'", "head":"release","base":"gh-pages"}'
