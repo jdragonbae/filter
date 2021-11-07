@@ -24,3 +24,5 @@ testpages.adblockplus.org##div[href^="http://testcase-startswith.com/"]
 testpages.adblockplus.org##div[style^="width: 201px;"]
 testpages.adblockplus.org##div[style$="width: 202px;"]
 testpages.adblockplus.org##div[style*="width: 203px;"]
+testpages.adblockplus.org##.testcase-ehe
+testpages.adblockplus.org#@#.testcase-ehe
