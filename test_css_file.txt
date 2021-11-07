@@ -27,4 +27,4 @@ testpages.adblockplus.org##div[style$="width: 202px;"]
 testpages.adblockplus.org##div[style*="width: 203px;"]
 testpages.adblockplus.org##.testcase-ehe
 testpages.adblockplus.org#@#.testcase-ehe
-testpages.adblockplus.org#@##eh-generic
+! testpages.adblockplus.org#@##eh-generic
