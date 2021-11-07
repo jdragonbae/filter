@@ -12,6 +12,7 @@
 ! GitHub issues: https://github.com/easylist/easylist/issues
 ! GitHub pull requests: https://github.com/easylist/easylist/pulls
 
+###eh-generic
 testpages.adblockplus.org###eh-id
 testpages.adblockplus.org##div[id='']
 testpages.adblockplus.org##.eh-class
