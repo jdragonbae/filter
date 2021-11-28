@@ -9,5 +9,13 @@ site broken issues.
  - We'd like to serve the filter list to third-party browsers with **different
    release cycle and policy** than Bromite.
 
+## Make indexed css filter
+```
+1. wget https://easylist.to/easylist/easylist.txt
+2. ruleset_converter --input_format=filter-list --output_format=unindexed-ruleset --input_files=easylist.txt --output_file=easylist_unindexed
+3. subresource_indexing_tool easylist_unindexed easylist_indexed
+
+```
+
 ## License
 GPL 3.0 (follows Bromite project)
