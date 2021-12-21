@@ -12,8 +12,8 @@ site broken issues.
 ## Make indexed css filter
 ```
 1. wget https://easylist.to/easylist/easylist.txt
-2. ruleset_converter --input_format=filter-list --output_format=unindexed-ruleset --input_files=easylist.txt --output_file=easylist_unindexed
-3. subresource_indexing_tool easylist_unindexed easylist_indexed
+2. ./css_ruleset_converter --input_format=filter-list --output_format=unindexed-ruleset --input_files=easylist.txt --output_file=easylist_unindexed
+3. ./css_subresource_indexing_tool easylist_unindexed easylist_indexed
 
 ```
 
