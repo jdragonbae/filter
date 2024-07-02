@@ -1,0 +1,141 @@
+#
+ÿï08@R}abptestpages.org#$#hide-if-has-and-matches-style a[href="#comments-target-ad"] div[id] span.label ';' /\\bdisplay:\ inline\;/
+:ÿï08@R*abptestpages.org/blocked-service-worker.js
+:ÿï08@R*abptestpages.org/allowed-service-worker.js
+:ÿï08@R*abptestpages.org/allowed-service-worker.js
+0ÿï08@R /testfiles/service-worker/ad.png
+3ÿï08@R#/testfiles/service-worker/no_ad.png
+3ÿï08@R#/testfiles/service-worker/no_ad.png
+:ÿï08@R*abptestpages.org/testfiles/elemhide/basic/
+@ÿï08@R0abptestpages.org/testfiles/elemhide/iframe/*.png
+G€ *
+abptestpages.org08@R$abptestpages.org/exception_websocket
+G€ *
+abptestpages.org08@R$abptestpages.org/exception_websocket
+Dÿï08@R4abptestpages.org/testfiles/xmlhttprequest_exception/
+B 08@R4abptestpages.org/testfiles/xmlhttprequest_exception/
+Hÿï08@R8abptestpages.org/testfiles/iframe_exception/expected.png
+E 08@R7abptestpages.org/testfiles/iframe_exception/empty.html^
+"€08@Rabptestpages.org/*^
+4€08@R%abptestpages.org/en/exceptions/ping*^
+Xÿï08@RHhttps://blocked.abptestpages.org/testfiles/iframe_exception/expected.png
+C *
+allowed.abptestpages.org08@Rblocked.abptestpages.org^
+dÿï08@RThttps://subdomain.abptestpages.org/testfiles/iframe_exception/subdomain_expected.png
+*€ 08@Rallowed.abptestpages.org^
+Aÿï08@R1abptestpages.org/testfiles/subdocument_exception/
+@€08@R1abptestpages.org/testfiles/subdocument_exception/
+Aÿï08@R1abptestpages.org/testfiles/sitekey/outofframe.png
+Bÿï08@R2abptestpages.org/testfiles/sitekey/inframe_mv3.png
+4ÿï08@R$abptestpages.org/testfiles/document/
+5 08@R'abptestpages.org/en/exceptions/document
+> 08@R0abptestpages.org/en/exceptions/csp_genericblock^
+<ÿï08@R,abptestpages.org/testfiles/script_exception/
+:08@R,abptestpages.org/testfiles/script_exception/
+3ÿï08@R#/testfiles/genericblock/generic.png
+Hÿï*
+abptestpages.org08@R$/testfiles/genericblock/specific.png
+9 08@R+abptestpages.org/en/exceptions/genericblock
+Dÿï08@R4abptestpages.org/testfiles/image_exception/image.png
+908@R+abptestpages.org/testfiles/image_exception/
+Zÿï08@RJallowed.subdomain.abptestpages.org/testfiles/image_exception/subdomain.png
+C08@R5subdomain.abptestpages.org/testfiles/image_exception/
+@ÿï08@R0abptestpages.org/testfiles/stylesheet_exception/
+>08@R0abptestpages.org/testfiles/stylesheet_exception/
+Aÿï08@R1abptestpages.org/testfiles/sitekey/outofframe.png
+>ÿï08@R.abptestpages.org/testfiles/sitekey/inframe.png
+Aÿï08@R1abptestpages.org/testfiles/blocking/full-path.png
+;ÿï08@R+/testfiles/blocking/wildcard/*/wildcard.png
+/ÿï08@R/testfiles/blocking/dynamic.png
+8ÿï08@HR&/testfiles/match-case/static/*/abc.png
+9ÿï08@HR'/testfiles/match-case/dynamic/*/abc.png
+=€ *
+abptestpages.org08@Rabptestpages.org/websocket
+Wÿï08@RGabptestpages.org#?#.ehei-properties:not(:-abp-properties(width: 238px))
+Sÿï08@RCabptestpages.org#?#.ehei-has:not(:-abp-has(span.ehei-has-not-hide))
+Zÿï08@RJabptestpages.org#?#.ehei-contains:not(span:-abp-contains(example-content))
+kÿï08@R[abptestpages.org#?#.ehei-chained-parent:not(:-abp-has(> div:-abp-properties(width: 198px)))
+Qÿï08@RAabptestpages.org#?#.ehei-case:not(:-abp-properties(WiDtH: 209px))
+Qÿï08@RAabptestpages.org#?#.ehei-wildcard:not(:-abp-properties(cursor:*))
+Yÿï08@RIabptestpages.org#?#.ehei-regex:not(:-abp-properties(/width: 11[1-5]px;/))
+iÿï08@RYabptestpages.org#?#.ehei-contains-regex:not(span:-abp-contains(/example-contentregex\d/))
+/ÿï08@Radblockplus-icon-colour-web.svg
+ÿï08@Rabb-logo.png
+8 08@R*abptestpages.org/testfiles/xmlhttprequest/
+Sÿï08@RCabptestpages.org#?#div:-abp-properties(width: 46px) {remove: true;}
+Yÿï08@RIabptestpages.org#?#div:-abp-has(>div>span.remove-abp-has) {remove: true;}
+Pÿï08@R@abptestpages.org#?#div:has(>div>span.remove-has) {remove: true;}
+]ÿï08@RMabptestpages.org#?#span:-abp-contains(remove-contains-target) {remove: true;}
+lÿï08@R\abptestpages.org#?#span:xpath(//*[@id="basic-xpath-usage-with-remove-fail"]) {remove: true;}
+Qÿï08@RAabptestpages.org#?#span:has-text(remove-has-text) {remove: true;}°,
+cÿï08@RSabptestpages.org#?#div:-abp-has(> div:-abp-properties(width: 47px)) {remove: true;}
+Sÿï08@RCabptestpages.org#?#div:-abp-properties(WiDtH: 48px) {remove: true;}
+]ÿï08@RMabptestpages.org#?#.remove-wildcard:-abp-properties(cursor:*) {remove: true;}
+[ÿï08@RKabptestpages.org#?#div:-abp-properties(/width: 13[1-5]px;/) {remove: true;}
+dÿï08@RTabptestpages.org#?#div > div:-abp-contains(/remove-containsregex\d/) {remove: true;}
+"€08@Rabptestpages.org/*^
+"€08@Rabptestpages.org/*^
+Dÿï*
+abptestpages.org08@R /testfiles/domain/static/target/
+>ÿï*
+abptestpages.org08@R/testfiles/domain/dynamic/
+Aÿï08@R1abptestpages.org/testfiles/blocking/full-path.png
+;ÿï08@R+/testfiles/blocking/wildcard/*/wildcard.png
+/ÿï08@R/testfiles/blocking/dynamic.png
+Kÿï08@R;subdomain.abptestpages.org/testfiles/blocking/subdomain.png
+(ÿï08@Rabptestpages.org#?#input
+(ÿï08@Rabptestpages.org#?#aside
+6€08@R'abptestpages.org/testfiles/subdocument/
+Bÿï08@R2abptestpages.*#?#div:-abp-properties(width: 230px)
+Dÿï08@R4abptestpages.*#?#div:-abp-has(>div>span.ehe-abp-has)
+Rÿï08@RBabptestpages.*#?#div:-abp-has(> div:-abp-properties(width: 231px))
+Mÿï08@R=abptestpages.*#?#.ehe-wildcard:-abp-properties(font-weight:*)
+Kÿï08@R;abptestpages.*#?#div > div:-abp-contains(ehe-containsregex)
+jÿï08@RZabptestpages.org#?#.removei-properties:not(:-abp-properties(width: 137px)) {remove: true;}
+iÿï08@RYabptestpages.org#?#.removei-has:not(:-abp-has(span.removei-has-not-hide)) {remove: true;}
+mÿï08@R]abptestpages.org#?#.removei-contains:not(span:-abp-contains(example-content)) {remove: true;}
+~ÿï08@Rnabptestpages.org#?#.removei-chained-parent:not(:-abp-has(> div:-abp-properties(width: 138px))) {remove: true;}
+dÿï08@RTabptestpages.org#?#.removei-case:not(:-abp-properties(WiDtH: 139px)) {remove: true;}
+dÿï08@RTabptestpages.org#?#.removei-wildcard:not(:-abp-properties(cursor:*)) {remove: true;}
+lÿï08@R\abptestpages.org#?#.removei-regex:not(:-abp-properties(/width: 14[1-5]px;/)) {remove: true;}
+|ÿï08@Rlabptestpages.org#?#.removei-contains-regex:not(span:-abp-contains(/example-contentregex\d/)) {remove: true;}
+`ÿï08@RPabptestpages.org#?#div:-abp-properties(width: 56px) {background-color: #0dc74b;}
+jÿï08@RZabptestpages.org#?#div:-abp-has(>div>span.inline-css-abp-has) {background-color: #0dc74b;}
+aÿï08@RQabptestpages.org#?#div:has(>div>span.inline-css-has) {background-color: #0dc74b;}
+oÿï08@R_abptestpages.org#?#span:-abp-contains(.inline-css-contains-target) {background-color: #0dc74b;}
+}ÿï08@Rmabptestpages.org#?#span:xpath(//*[@id="basic-xpath-usage-with-inline-css-fail"]) {background-color: #0dc74b;}
+bÿï08@RRabptestpages.org#?#span:has-text(inline-css-has-text) {background-color: #0dc74b;}
+pÿï08@R`abptestpages.org#?#div:-abp-has(> div:-abp-properties(width: 57px)) {background-color: #0dc74b;}
+`ÿï08@RPabptestpages.org#?#div:-abp-properties(WiDtH: 58px) {background-color: #0dc74b;}
+nÿï08@R^abptestpages.org#?#.inline-css-wildcard:-abp-properties(cursor:*) {background-color: #0dc74b;}
+hÿï08@RXabptestpages.org#?#div:-abp-properties(/width: 14[1-5]px;/) {background-color: #0dc74b;}
+uÿï08@Reabptestpages.org#?#div > div:-abp-contains(/inline-css-containsregex\d/) {background-color: #0dc74b;}
+~ÿï08@Rnabptestpages.org#?#.inline-css-inv-properties:not(:-abp-properties(width: 147px)) {background-color: #0dc74b;}
+„ÿï08@Rtabptestpages.org#?#.inline-css-inv-has:not(:-abp-has(span.inline-css-inv-has-not-hide)) {background-color: #0dc74b;}
+ÿï08@Rqabptestpages.org#?#.inline-css-inv-contains:not(span:-abp-contains(example-content)) {background-color: #0dc74b;}
+“ÿï08@R‚abptestpages.org#?#.inline-css-inv-chained-parent:not(:-abp-has(> div:-abp-properties(width: 148px))) {background-color: #0dc74b;}
+xÿï08@Rhabptestpages.org#?#.inline-css-inv-case:not(:-abp-properties(WiDtH: 149px)) {background-color: #0dc74b;}
+xÿï08@Rhabptestpages.org#?#.inline-css-inv-wildcard:not(:-abp-properties(cursor:*)) {background-color: #0dc74b;}
+€ÿï08@Rpabptestpages.org#?#.inline-css-inv-regex:not(:-abp-properties(/width: 15[1-5]px;/)) {background-color: #0dc74b;}
+‘ÿï08@R€abptestpages.org#?#.inline-css-inv-contains-regex:not(span:-abp-contains(/example-contentregex\d/)) {background-color: #0dc74b;}
+Dÿï08@R4abptestpages.org#?#div:-abp-properties(width: 213px)
+Fÿï08@R6abptestpages.org#?#div:-abp-has(>div>span.ehe-abp-has)
+=ÿï08@R-abptestpages.org#?#div:has(>div>span.ehe-has)
+Jÿï08@R:abptestpages.org#?#span:-abp-contains(ehe-contains-target)
+Pÿï08@R@abptestpages.org#?#span:xpath(//*[@id="basic-xpath-usage-fail"])
+>ÿï08@R.abptestpages.org#?#span:has-text(ehe-has-text)
+Tÿï08@RDabptestpages.org#?#div:-abp-has(> div:-abp-properties(width: 214px))
+Dÿï08@R4abptestpages.org#?#div:-abp-properties(WiDtH: 215px)
+Jÿï08@R:abptestpages.org#?#.ehe-wildcard:-abp-properties(cursor:*)
+Kÿï08@R;abptestpages.org#?#div:-abp-properties(/width: 12[1-5]px;/)
+Qÿï08@RAabptestpages.org#?#div > div:-abp-contains(/ehe-containsregex\d/)
+008@R"abptestpages.org/testfiles/script/
+ *
+abptestpages.org08@
+608@R(abptestpages.org/testfiles/image/static/
+708@R)abptestpages.org/testfiles/image/dynamic/
+408@R&abptestpages.org/testfiles/stylesheet/|
+z *
+music.youtube.com*
+www.youtube.com*
+m.youtube.com08@R3googlevideo.com/videoplayback*&ctier=L&*%2Cctier%2C
